@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interviews Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>interviews Registration Form</h2>
+    <form id="interviewsForm" action="interviewsform.php" method="POST">
+        
+        
+        <label for="CandidateID">CandidateID:</label><br>
+        <input type="number" id="CandidateID" name="CandidateID" required><br>
+        
+        <label for="JobID">JobID :</label><br>
+        <input type="number" id="JobID" name="JobID" required><br>
+
+        <label for="InterviewerID">InterviewerID  :</label><br>
+        <input type="number" id="InterviewerID" name="InterviewerID" required><br>
+
+        <label for="Date">Date:</label><br>
+        <input type="date" id="Date" name="Date" required><br>
+
+        <label for="Time">Time:</label><br>
+        <input type="Time" id="Time" name="Time" required><br>
+
+        <label for="Location">Location:</label><br>
+        <input type="text" id="Location" name="Location" required><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('interviewsForm').addEventListener('submit', function(event) {
+            // ValiProgress the form fields before submission
+            var CandidateID = document.getElementById('CandidateID').value;
+            var JobID  = document.getElementById('JobID').value;
+            var InterviewID  = document.getElementById('InterviewerID').value;
+            var Date  = document.getElementById('Date').value;
+            var Time  = document.getElementById('Time').value;
+            var Location  = document.getElementById('Location').value;
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!CandidateID || !JobID || !InterviewerID || !Date || !Time || !Location) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

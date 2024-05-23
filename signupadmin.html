@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style5.css">
+    <script type="text/javascript" src="javascript/signup.js"></script>
+</head>
+<body>
+    <header>
+        <h1><img src="images/th (7).jpeg" alt="icon"> recruitmentplatform</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Create Account</h2>
+            <form action="signup.php" method="POST">
+                <table id="table1">
+                    <tr>
+                        <td>Username:</td>
+                        <td><input type="text" name="username" id="username" oninput="validate()"></td>
+                        <td><div id="errorusername" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="email" id="email" oninput="validate()"></td>
+                        <td><div id="errorEmail" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="password" id="password" oninput="validate()"></td>
+                        <td><div id="errorpassword" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Full Name:</td>
+                        <td><input type="text" name="full_name" id="full_name" oninput="validate()"></td>
+                        <td><div id="errorfull_name" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Create Account" class="btn"></td>
+                        <td><div id="errorFinal" class="error"></div></td>
+                    </tr>
+                </table>
+            </form>
+            <div class="create-account">
+                <p>Already have an account? <a href="login.html">Sign In</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

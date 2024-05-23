@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>applications Update Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>applications Update Form</h2>
+    <form id="applicationsForm" action="updateapplicationsform.php" method="POST">
+
+        <label for="ApplicationID">ApplicationID:</label><br>
+        <input type="number" id="ApplicationID" name="ApplicationID" required><br>
+        
+        <label for="CandidateID">CandidateID:</label><br>
+        <input type="number" id="CandidateID" name="CandidateID" required><br>
+        
+        <label for="JobID ">JobID :</label><br>
+        <input type="number" id="JobID" name="JobID" required><br>
+        <label for="Status">Status:</label><br>
+         <select id="Status" name="Status">
+                                    <option value="Pending">Pending</option>
+                                    <option value="Reviewed">Reviewed</option>
+                                    <option value="Rejected">Rejected</option>
+                                    <option value="Hired">Hired</option>
+                                    
+                                </select><br>
+
+        <label for="DateApplied">DateApplied:</label><br>
+        <input type="date" id="DateApplied" name="DateApplied" required><br>
+        
+        
+
+        
+        
+        <br>
+        <input type="submit" value="update" class="btn">
+    </form>
+
+    <script>
+        document.getElementById('applicationsForm').addEventListener('submit', function(event) {
+            // Validate the form fields before submission
+            var ApplicationID = document.getElementById('ApplicationID').value;
+            var CandidateID = document.getElementById('CandidateID').value;
+            var JobID  = document.getElementById('JobID ').value;
+            var Status = document.getElementById('Status').value;
+            var DateApplied = document.getElementById('DateApplied').value;
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!   ApplicationID || !CandidateID || !JobID  || !Date || !Status) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

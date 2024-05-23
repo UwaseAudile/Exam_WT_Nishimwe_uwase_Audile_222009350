@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>User Login</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: lightcyan;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.audi {
+    text-align: center;
+}
+
+.audi1 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.login-title {
+    margin-bottom: 20px;
+}
+
+.form {
+    display: inline-block;
+    text-align: left;
+}
+.audi{
+    height: 30rem;
+    width: 30%;
+    border-radius: 5rem;
+    align-items: center;
+      justify-content: center;
+    padding: 1rem;
+}
+.audi1 form{
+    float: center;
+    justify-content: center;
+  margin: 700auto;
+  color: darkblue;
+}
+.audi1 form input{
+    border-radius: 10rem;
+    border: 2px solid black;
+    background-color:lightcyan;
+    padding: 0.5rem;
+    margin-bottom: 7px;
+}
+.audi1 form  input#login{
+    text-align: center;
+    width: 5rem;
+    border: 1px solid green;
+    cursor: pointer;
+}
+.audi1 form input#login:hover{
+    width: 7rem;
+    color: pink;
+    border: 1px solid yellow;
+    transition: 1s;
+}
+.log{
+    text-align: center;
+    width: 5rem;
+    color: black;
+    cursor: pointer;
+    border-radius: 5rem;
+    padding: 0.5rem;
+}
+.log:hover{
+    width: 7rem;
+    color: black;
+    background-color: lightpink;
+    border: 1px solid yellow;
+    transition: 1s;
+}
+.logo{
+    height: 100px;
+    width: 200px;
+    
+    
+}
+
+    </style>
+</head>
+
+<body>
+    <section class="audi">
+        <div class="audi1">
+            <h1 class="login-title">Welcome to our recruitment platform</h1>
+            <img class="logo" src="images/th (7).jpeg">
+            <form action="loginuser.php" class="form" method="post">
+                <h2>Login</h2>
+                <label>Email:</label><br>
+                <input type="email" name="email" required><br>
+                <label>Password:</label><br>
+                <input type="password" name="password" required><br>
+                <input class="log" type="submit" value="Login">
+                <input class="log" type="reset" value="Cancel">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offerdetails Registration Form</t>
+    <Salary rel="stylesheet" type="text/css" href="style3.css">
+    <Salary rel="stylesheet" type="text/css" href="css/style1.css">
+    <Salary rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>offerdetails Registration Form</h2>
+    <form id="offerdetailsForm" action="offerdetailsform.php" method="POST">
+        
+        <label for="CandidateID">CandidateID:</label><br>
+        <input type="number" id="CandidateID" name="CandidateID" required><br>
+        
+        <label for="JobID">JobID :</label><br>
+        <input type="number" id="JobID" name="JobID" required><br>
+
+        <label for="OfferStatus">OfferStatus:</label><br>
+         <select id="OfferStatus" name="OfferStatus">
+            <option value="Pending">Pending</option>
+                                    <option value="Accepted">Accepted</option>
+                                    <option value="Declined">Declined</option>
+                                </select><br>
+        
+        <label for="Salary">a:</label><br>
+        <input type="text" id="Salary" name="Salary" required><br>
+
+        <label for="Benefits">Benefits:</label><br>
+        <input type="text" id="Benefits" name="Benefits" required><br>
+
+        <label for="NegotiationHistory">NegotiationHistory:</label><br>
+        <input type="text" id="NegotiationHistory" name="NegotiationHistory" required><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('offerdetailsForm').addEventListener('submit', function(event) {
+            // ValiOfferStatus the form fields before submission
+            var CandidateID = document.getElementById('CandidateID').value;
+            var JobID  = document.getElementById('JobID').value;
+            var OfferStatus = document.getElementById('OfferStatus').value;
+            var Salary = document.getElementById('Salary').value;
+            var Benefits = document.getElementById('Benefits').value;
+            var NegotiationHistory = document.getElementById('NegotiationHistory').value;
+            
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!CandidateID || !JobID  || !OfferStatus || !Salary|| !Benefits || !NegotiationHistory) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

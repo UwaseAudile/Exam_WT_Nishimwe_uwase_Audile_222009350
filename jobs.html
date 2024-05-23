@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .job-listing {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .job-photo {
+            flex: 0 0 150px;
+            height: 150px;
+            margin-right: 20px;
+            border-radius: 8px;
+            background-color: #eaeaea;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .job-info {
+            flex: 1;
+        }
+
+        .job-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .job-description, .job-requirements, .job-location, .job-company {
+            margin-bottom: 10px;
+        }
+
+        .job-company {
+            font-weight: bold;
+        }
+
+        .apply-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .apply-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function applyNow(jobID) {
+            window.location.href = 'Candidateform.html?jobID=' + jobID;
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <div class="container">
+        <h2>Available Job Listings</h2>
+        
+        <div class="job-listing">
+            <div class="job-photo" style="background-image: url('images/se.png');"></div>
+            <div class="job-info">
+                <div class="job-title">Software Engineer</div>
+                <div class="job-company">Company ID: 101</div>
+                <div class="job-location">Location: New York, NY</div>
+                <div class="job-description">Description: We are looking for a skilled software engineer to join our team. You will be responsible for developing high-quality software solutions.</div>
+                <div class="job-requirements">Requirements: Proficient in JavaScript, experience with React and Node.js, strong problem-solving skills.</div>
+                <button class="apply-button" onclick="applyNow(1)">Apply Now</button>
+            </div>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-photo" style="background-image: url('images/gd.jpg');"></div>
+            <div class="job-info">
+                <div class="job-title">Graphic Designer</div>
+                <div class="job-company">Company ID: 102</div>
+                <div class="job-location">Location: San Francisco, CA</div>
+                <div class="job-description">Description: Seeking a creative graphic designer to create engaging and on-brand graphics for a variety of media.</div>
+                <div class="job-requirements">Requirements: Proficient in Adobe Creative Suite, strong portfolio, excellent communication skills.</div>
+                <button class="apply-button" onclick="applyNow(2)">Apply Now</button>
+            </div>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-photo" style="background-image: url('images/ms.jpg');"></div>
+            <div class="job-info">
+                <div class="job-title">Marketing Specialist</div>
+                <div class="job-company">Company ID: 103</div>
+                <div class="job-location">Location: Austin, TX</div>
+                <div class="job-description">Description: We are looking for a marketing specialist to help plan and implement our marketing and advertising activities.</div>
+                <div class="job-requirements">Requirements: Experience with SEO/SEM campaigns, strong analytical skills, proficiency in marketing software.</div>
+                <button class="apply-button" onclick="applyNow(3)">Apply Now</button>
+            </div>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-photo" style="background-image: url('images/ds.jpg');"></div>
+            <div class="job-info">
+                <div class="job-title">Data Scientist</div>
+                <div class="job-company">Company ID: 104</div>
+                <div class="job-location">Location: Boston, MA</div>
+                <div class="job-description">Description: We are seeking a data scientist to analyze large amounts of raw information to find patterns that will help improve our company.</div>
+                <div class="job-requirements">Requirements: Experience with data mining, understanding of machine-learning and operations research, knowledge of R, SQL and Python.</div>
+                <button class="apply-button" onclick="applyNow(4)">Apply Now</button>
+            </div>
+        </div>
+
+        <div class="job-listing">
+            <div class="job-photo" style="background-image: url('images/pm.jpg');"></div>
+            <div class="job-info">
+                <div class="job-title">Product Manager</div>
+                <div class="job-company">Company ID: 105</div>
+                <div class="job-location">Location: Seattle, WA</div>
+                <div class="job-description">Description: We are looking for an experienced Product Manager to lead our product team and oversee the development of new products.</div>
+                <div class="job-requirements">Requirements: Experience in product management, understanding of Agile methodology, excellent communication and leadership skills.</div>
+                <button class="apply-button" onclick="applyNow(5)">Apply Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>candidateprofiles Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>candidateprofiles Registration Form</h2>
+    <form id="candidateprofilesForm" action="candidateprofilesform.php" method="POST">
+        
+        <label for="Name">Name:</label><br>
+        <input type="text" id="Name" name="Name" required><br>
+        
+        <label for="Email">Email :</label><br>
+        <input type="text" id="Email" name="Email" required><br>
+
+        <label for="Phone">Phone:</label><br>
+        <input type="text" id="Phone" name="Phone" required><br>
+
+        <label for="Resume">Resume:</label><br>
+        <input type="text" id="Resume" name="Resume" required><br>
+
+        <label for="Skills">Skills:</label><br>
+        <input type="text" id="Skills" name="Skills" required><br>
+
+        <label for="Education">Education:</label><br>
+        <input type="text" id="Education" name="Education" required><br>
+
+        <label for="Experience">Experience:</label><br>
+        <input type="text" id="Experience" name="Experience" required><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('candidateprofilesForm').addEventListener('submit', function(event) {
+            // ValiPhone the form fields before submission
+            var Name = document.getElementById('Name').value;
+            var Email  = document.getElementById('Email ').value;
+            var Phone = document.getElementById('Phone').value;
+            var Resume = document.getElementById('Resume').value;
+            var Skills = document.getElementById('Skills').value;
+            var Education = document.getElementById('Education').value;
+            var Experience = document.getElementById('Experience').value;
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!Name || !Email  || !Phone || !Resume || !Skills || !Education || !Experience) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backgroundcheck Update Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>backgroundcheck Update Form</h2>
+    <form id="backgroundcheckForm" action="updatebackgroundcheckform.php" method="POST">
+
+        <label for="CheckID">CheckID:</label><br>
+        <input type="number" id="CheckID" name="CheckID" required><br>
+        
+        <label for="CandidateID">CandidateID:</label><br>
+        <input type="number" id="CandidateID" name="CandidateID" required><br>
+
+        <label for="TypeOfCheck">TypeOfCheck:</label><br>
+        <input type="text" id="TypeOfCheck" name="TypeOfCheck" required><br>
+        
+        <label for="Status">  Status:</label><br>
+         <select id="Status" name="Status">
+            <option value="Pending">Pending</option>
+                                    <option value="Cleared">Cleared</option>
+                                    <option value="Flagged">Flagged</option>
+                                    </select><br>
+
+        <label for="Date">Date:</label><br>
+        <input type="date" id="Date" name="Date" required><br>
+        <br>
+        <input type="submit" value="update" class="btn">
+    </form>
+
+    <script>
+        document.getElementById('backgroundcheckForm').addEventListener('submit', function(event) {
+            // ValiTypeOfCheck the form fields before submission
+            var CheckID = document.getElementById('CheckID').value;
+            var CandidateID = document.getElementById('CandidateID').value;
+            var TypeOfCheck = document.getElementById('TypeOfCheck').value;
+            var Status = document.getElementById('Status').value;
+            var Date = document.getElementById('Date').value;
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!CandidateID || !CandidateID  || !TypeOfCheck || !  Status) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

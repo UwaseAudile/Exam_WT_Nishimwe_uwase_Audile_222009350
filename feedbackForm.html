@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>feedback Registration Form</h2>
+    <form id="feedbackForm" action="feedbackform.php" method="POST">
+        
+        <label for="InterviewID">InterviewID:</label><br>
+        <input type="number" id="InterviewID" name="InterviewID" required><br>
+        
+        <label for="FeedbackType">FeedbackType :</label><br>
+        <select id="FeedbackType" name="FeedbackType">
+            <option value="Positive">Positive</option>
+            <option value="Negative">Negative</option>
+        </select><br>
+        
+        <label for="Comments">Comments:</label><br>
+        <input type="text" id="Comments" name="Comments" required><br>
+
+        <label for="InterviewerName">InterviewerName:</label><br>
+        <input type="text" id="InterviewerName" name="InterviewerName" required><br>
+
+        <label for="Date">Date:</label><br>
+        <input type="date" id="Date" name="Date" required><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            // ValiInterviewerName the form fields before submission
+            var InterviewID = document.getElementById('InterviewID').value;
+            var FeedbackType  = document.getElementById('FeedbackType ').value;
+            var Comments = document.getElementById('Comments').value;
+            var InterviewerName = document.getElementById('InterviewerName').value;
+            var Date = document.getElementById('Date').value;
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!InterviewID || !FeedbackType  || !InterviewerName || !Comments) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

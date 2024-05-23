@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skills Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>skills Registration Form</h2>
+    <form id="skillsForm" action="skillsform.php" method="POST">
+        
+        <label for="SkillName">SkillName:</label><br>
+        <input type="number" id="SkillName" name="SkillName" required><br>
+        
+        <label for="Description ">Description:</label><br>
+        <input type="number" id="Description" name="Description" required><br>
+
+        <label for="ProficiencyLevel">ProficiencyLevel:</label><br>
+         <select id="ProficiencyLevel" name="ProficiencyLevel">
+            <option value="Beginner">Beginner</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Advanced">Advanced</option>
+                                </select><br>
+        
+        <label for="Certifications">Certifications:</label><br>
+        <input type="text" name="Certifications" name="Certifications" required><br>
+
+        
+        
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('skillsForm').addEventListener('submit', function(event) {
+            // Validate the form fields before submission
+            var SkillName = document.getElementById('SkillName').value;
+            var Description  = document.getElementById('Description ').value;
+            var Certifications = document.getElementById('Certifications').value;
+            var issuerName = document.getElementById('IssuerName').value;
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!SkillName || !Description  || !Date || !Certifications) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

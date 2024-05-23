@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assessmentresults Update Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>assessmentresults Update Form</h2>
+    <form id="assessmentresultsForm" action="updateassessmentresultsform.php" method="POST">
+
+        <label for="AssessmentID">AssessmentID:</label><br>
+        <input type="number" id="AssessmentID" name="AssessmentID" required><br>
+        
+        <label for="CandidateID">CandidateID:</label><br>
+        <input type="number" id="CandidateID" name="CandidateID" required><br>
+        
+        <label for="AssessmentType">AssessmentType :</label><br>
+        <input type="text" id="AssessmentType" name="AssessmentType" required><br>
+
+        <label for="Score">Score:</label><br>
+        <input type="text" id="Score" name="Score" required><br>
+        
+        <label for="Date">Date:</label><br>
+        <input type="date" id="Date" name="Date" required><br>
+
+        <label for="Feedback">Feedback:</label><br>
+        <input type="text" id="Feedback" name="Feedback" required><br>
+        <br>
+        <input type="submit" value="update" class="btn">
+    </form>
+
+    <script>
+        document.getElementById('assessmentresultsForm').addEventListener('submit', function(event) {
+            // ValiScore the form fields before submission
+            var AssessmentID = document.getElementById('AssessmentID').value;
+            var CandidateID = document.getElementById('CandidateID').value;
+            var AssessmentType  = document.getElementById('AssessmentType ').value;
+            var Score = document.getElementById('Score').value;
+            var Date = document.getElementById('Date').value;
+             var Feedback = document.getElementById('Feedback').value;
+            
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!   CandidateID || !AssessmentType  || !Score || !Date) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

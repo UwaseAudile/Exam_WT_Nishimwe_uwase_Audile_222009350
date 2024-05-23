@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="number"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"], .back-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover, .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Applications Registration Form</h2>
+    <form id="applicationsForm" action="applicationsform.php" method="POST">
+        <label for="CandidateID">Candidate ID:</label>
+        <input type="number" id="CandidateID" name="CandidateID" required>
+        
+        <label for="JobID">Job ID:</label>
+        <input type="number" id="JobID" name="JobID" required>
+
+        <label for="Status">Status:</label>
+        <select id="Status" name="Status">
+            <option value="Pending">Pending</option>
+            <option value="Reviewed">Reviewed</option>
+            <option value="Rejected">Rejected</option>
+            <option value="Hired">Hired</option>
+        </select>
+
+        <label for="DateApplied">Date Applied:</label>
+        <input type="date" id="DateApplied" name="DateApplied" required>
+        
+        <input type="submit" value="Submit">
+        <button class="back-button" onclick="window.location.href='Dashboarduser.html'">Back</button>
+
+        <div id="errorMessage" class="error-message"></div>
+    </form>
+
+    <script>
+        document.getElementById('applicationsForm').addEventListener('submit', function(event) {
+            // Validate the form fields before submission
+            var CandidateID = document.getElementById('CandidateID').value;
+            var JobID = document.getElementById('JobID').value;
+            var DateApplied = document.getElementById('DateApplied').value;
+            var Status = document.getElementById('Status').value;
+            var errorMessage = '';
+
+            // Check if fields are not empty
+            if (!CandidateID || !JobID || !DateApplied || !Status) {
+                errorMessage = 'Please fill in all required fields.';
+            }
+
+            // Display error message if any
+            if (errorMessage) {
+                document.getElementById('errorMessage').innerText = errorMessage;
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

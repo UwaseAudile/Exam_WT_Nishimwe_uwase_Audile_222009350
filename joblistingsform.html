@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joblistings Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
+    <button class="back-button" onclick="window.location.href='Dashboard.html'">Back</button>
+</head>
+<body>
+    <h2>joblistings Registration Form</h2>
+    <form id="joblistingsForm" action="joblistingsform.php" method="POST">
+        
+        <label for="Title">Title:</label><br>
+        <input type="number" id="Title" name="Title" required><br>
+        
+        <label for="Description">Description :</label><br>
+        <input type="text" id="Description" name="Description" required><br>
+
+        <label for="Requirements">Requirements:</label><br>
+        <input type="text" id="Requirements" name="Requirements" required><br>
+
+        <label for="Location">Location:</label><br>
+        <input type="text" id="Location" name="Location" required><br>
+
+        <label for="CompanyID">CompanyID:</label><br>
+        <input type="text" id="CompanyID" name="CompanyID" required><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('joblistingsForm').addEventListener('submit', function(event) {
+            // ValiRequirements the form fields before submission
+            var Title = document.getElementById('Title').value;
+            var Description  = document.getElementById('Description ').value;
+            var Requirements = document.getElementById('Requirements').value;
+           var Location = document.getElementById('Location').value;
+           var CompanyID = document.getElementById('CompanyID').value;
+
+            // Perform validation here (e.g., check if fields are not empty)
+
+            // Example: Check if fields are not empty
+            if (!Title || !Description  || !Requirements || !CompanyID) {
+                alert('Please fill in all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* homestyle.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 2rem;
+}
+
+.hero 
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ddd; /* Change to the desired hover color */
+    transform: scale(1.05); /* Scale the button on hover */
+}
+
+.job-listings {
+    text-align: center;
+}
+
+.job-listings h2 {
+    margin-bottom: 1rem;
+}
+
+.job-listing-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left-jobs, .right-jobs {
+    width: 48%;
+}
+
+.job-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #e4e4e4;
+    border-left: 5px solid #333;
+    gap: 1rem;
+}
+
+.job-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.job-info {
+    text-align: left;
+}
+
+.job-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.job-info a:hover {
+    text-decoration: underline;
+}
+
+.job-info p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+.job-listings .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+}

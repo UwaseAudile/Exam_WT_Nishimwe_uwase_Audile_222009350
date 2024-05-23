@@ -1,0 +1,78 @@
+/* jobstyle.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.job-description {
+    text-align: center;
+}
+
+.job-description h1 {
+    margin-bottom: 1rem;
+}
+
+.job-description img {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+}
+
+.job-description h2 {
+    margin-top: 2rem;
+}
+
+.job-description ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.job-description p, .job-description ul {
+    margin-bottom: 1rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
